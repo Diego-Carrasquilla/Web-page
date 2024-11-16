@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #dcdcdc;
+    background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.8)), 
+                url('img/header.jpg') no-repeat center center / cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header .title {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    animation: fade-in 2s ease-in-out;
+}
+
+/* Main Content Styles */
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(15, 32, 39, 0.85);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    color: #dcdcdc;
+    animation: slide-up 1.5s ease-out;
+}
+
+/* Sections */
+.info-section, .actors-section, .messages-section, .conditions-section {
+    margin-bottom: 40px;
+}
+.info-section {
+    display: flex;
+    align-items: stretch; /* Ambos elementos tendrán la misma altura */
+    justify-content: space-between; /* Espacio entre texto e imagen */
+    gap: 20px; /* Espaciado entre los dos elementos */
+}
+
+.text-content {
+    flex: 1; /* Permite que el texto ocupe espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido del texto */
+}
+
+.image-content {
+    flex: 1; /* Permite que la imagen ocupe el mismo espacio que el texto */
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+.image-content img {
+    max-width: 100%; /* Asegura que la imagen no sobrepase su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: 1px solid #ccc;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.info-section img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 168, 255, 0.3);
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00A8FF;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(26, 134, 138, 0.6);
+    animation: fade-in-down 1.5s ease;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    animation: fade-in-down 1.5s ease;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #ccc;
+    animation: slide-in 1s ease-in;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0F2027, #2C5364);
+    color: #dcdcdc;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+    animation: fade-in 1.5s ease;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: #00A8FF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #8C54FF;
+    text-shadow: 0 0 10px rgba(140, 84, 255, 0.6);
+}
+
+/* Animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

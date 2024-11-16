@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama De Secuencia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-int.css">
+</head>
+<body>
+    <header class="header">
+        <div class="overlay">
+            <h1 class="title">Diagrama De Secuencia</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="info-section">
+            <div class="text-content">
+                <h1 class="title">Gestión de Usuarios</h1>
+                <h2>Descripción</h2>
+                <p>
+                    Este módulo facilita a los usuarios registrados realizar préstamos de libros, consultar su historial de préstamos y realizar reservas de libros que no están disponibles actualmente. El sistema asegura la gestión de fechas límite para devoluciones, indicando claramente los plazos establecidos.
+                </p>
+                <p>
+                    También se registra automáticamente el historial de préstamos de cada usuario, incluyendo libros devueltos, en préstamo o reservados. Los bibliotecarios pueden consultar y administrar el estado de los préstamos y reservas. Además, se generan notificaciones automáticas para recordar a los usuarios sobre fechas de devolución próximas o vencidas.
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="img/Secuencia.jpg" alt="Módulo de Préstamos y Reservas">
+
+            </div>
+        </section>
+
+        <section class="actors-section">
+            <h2>Actores</h2>
+            <ul>
+                <li><strong>Usuario:</strong> Persona que desea realizar un préstamo o reserva de un libro.</li>
+                <li><strong>Sistema de Gestión de Biblioteca (SGB):</strong> Sistema encargado de gestionar las solicitudes de préstamos y reservas.</li>
+                <li><strong>Base de Datos de Libros (BDB):</strong> Repositorio donde se almacenan los datos de los libros.</li>
+            </ul>
+        </section>
+
+        <section class="messages-section">
+            <h2>Flujo de Mensajes</h2>
+            <ul>
+                <li>
+                    <strong>Solicitud de Préstamo o Reserva:</strong> 
+                    El Usuario envía una solicitud al SGB indicando que desea prestar o reservar un libro.
+                </li>
+                <li>
+                    <strong>Verificación de Disponibilidad:</strong>
+                    El SGB consulta a la BDB para verificar si el libro solicitado está disponible. 
+                    La BDB responde al SGB indicando si el libro está disponible o no.
+                </li>
+            </ul>
+        </section>
+
+        <section class="conditions-section">
+            <h2>Condiciones</h2>
+            <p><strong>Si el libro está disponible:</strong></p>
+            <ul>
+                <li>El SGB registra el préstamo en la BDB.</li>
+                <li>El SGB confirma al Usuario que el préstamo ha sido exitoso.</li>
+            </ul>
+            <p><strong>Si el libro no está disponible:</strong></p>
+            <ul>
+                <li>El SGB informa al Usuario que el libro no está disponible para préstamo.</li>
+            </ul>
+            <p><strong>Reserva:</strong></p>
+            <ul>
+                <li>El SGB registra la reserva en la BDB.</li>
+                <li>El SGB confirma al Usuario que la reserva ha sido exitosa.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sistema de Gestión de Biblioteca. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

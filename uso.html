@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Libros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-int.css">
+</head>
+<body>
+    <header class="header">
+        <div class="overlay">
+            <h1 class="title">Diagrama De casos De Uso</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="info-section">
+            <div class="text-content">
+                <h1 class="title">Gestión de libros</h1>
+                <h2>Descripción </h2>
+                <p>
+                    Este módulo permite administrar toda la información relacionada con los libros disponibles en la biblioteca. Los usuarios pueden buscar libros mediante filtros como título, autor, ISBN, género, y palabras clave. Los bibliotecarios pueden registrar nuevos libros en el sistema ingresando detalles como título, autor, edición, editorial, y categoría. Además, se pueden realizar actualizaciones de información, como cambiar el estado de un libro a "no disponible" o "en reparación". El sistema también permite eliminar libros que ya no forman parte del catálogo y consultar estadísticas sobre la disponibilidad o popularidad de los libros.
+                </p>
+                <!-- Imagen añadida -->
+                <img src="img/Casos_de_uso.jpg"  style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
+            </div>
+        </section>
+
+        <section class="actors-section">
+            <h2>Actores</h2>
+            <ul>
+                <li><strong>Usuario:</strong> Es la persona que utiliza el servicio de la biblioteca, principalmente para buscar, leer o alquilar libros.</li>
+                <li><strong>Técnico:</strong> Es el encargado de garantizar el funcionamiento correcto del sistema. <br><strong>Funciones principales:</strong> Realizar mantenimiento periódico, asegurar la calidad y la estabilidad del sistema.</li>
+                <li><strong>Biblioteca:</strong> Representa a la institución propietaria del sistema y los libros. Es responsable de administrar los recursos disponibles en el sistema.</li>
+            </ul>
+        </section>
+
+        <section class="process-section">
+            <h2>Pasos del Proceso</h2>
+            <ul>
+                <li><strong>Buscar Libro:</strong> El usuario utiliza el sistema para buscar un libro que necesite, ya sea para leer o alquilar.</li>
+                <li><strong>Registrar Libro:</strong> Un libro se registra en el sistema como comprado, alquilado o disponible para otros usuarios.</li>
+                <li><strong>Actualizar Detalles:</strong> Se modifica la información del libro en el sistema para reflejar datos más recientes o corregir errores.</li>
+                <li><strong>Consultar Disponibilidad:</strong> Se verifica si un libro está registrado en la base de datos y disponible para ser prestado o alquilado.</li>
+                <li><strong>Eliminar Libro:</strong> Se retira un libro del sistema, generalmente porque está obsoleto o fuera de circulación.</li>
+                <li><strong>Mantenimiento del Sistema:</strong> El técnico realiza una revisión del sistema para comprobar su funcionamiento y corregir errores.</li>
+                <li><strong>Agregar Libro:</strong> Un nuevo libro se ingresa a la base de datos, actualizando el inventario de la biblioteca.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sistema de Gestión de Biblioteca. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

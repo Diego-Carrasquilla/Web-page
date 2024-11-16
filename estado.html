@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama De Estado - Gestión de Mantenimiento y Reportes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-int.css">
+</head>
+<body>
+    <header class="header">
+        <div class="overlay">
+            <h1 class="title">Diagrama De Estado</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="info-section">
+            <div class="text-content">
+                <h1 class="title">Gestión de Mantenimiento y Reportes</h1>
+                <h2>Descripción</h2>
+                <p>
+                    Este módulo proporciona herramientas avanzadas para mantener la base de datos del sistema actualizada y generar reportes periódicos que ayuden en la toma de decisiones administrativas. Los reportes incluyen información sobre el estado del inventario, patrones de préstamo, multas acumuladas, libros más solicitados y libros menos populares. Además, los bibliotecarios pueden realizar tareas de mantenimiento, como eliminar registros duplicados, corregir errores de entrada y ejecutar auditorías del sistema para garantizar la integridad de los datos.
+                </p>
+                <!-- Imagen añadida -->
+                <img src="img/Estado.jpg" alt="Diagrama de Estado - Gestión de Mantenimiento y Reportes" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
+
+        </section>
+
+        <section class="states-section">
+            <h2>Estados del Libro</h2>
+            <ul>
+                <li><strong>Disponible:</strong> El libro está accesible para ser prestado o vendido. Representa el estado inicial de un libro sin restricciones de uso.</li>
+                <li><strong>Reservado:</strong> El libro ha sido apartado por un usuario o entidad y no puede ser prestado a otros. Se verifica que otro usuario no lo haya adquirido previamente.</li>
+                <li><strong>Prestado:</strong> El libro está en posesión de un usuario y no está disponible para otros. Se asegura que el préstamo esté registrado en el sistema.</li>
+                <li><strong>En Devolución:</strong> Indica que el usuario debe devolver el libro, ya que el plazo de préstamo ha finalizado. Permite hacer seguimiento a los libros pendientes de retorno.</li>
+                <li><strong>Reparación:</strong> El libro está en proceso de mantenimiento debido a daños o deterioro. No está disponible para préstamos hasta que se complete la reparación.</li>
+                <li><strong>Fuera de Circulación:</strong> El libro ha sido retirado del inventario y ya no aparece en la base de datos. Este estado puede aplicarse por pérdida, descarte o decisión administrativa.</li>
+            </ul>
+        </section>
+
+        <section class="transitions-section">
+            <h2>Transiciones entre Estados</h2>
+            <p>
+                Los libros pasan por diferentes estados dependiendo de las acciones realizadas por los usuarios y los bibliotecarios. La transición de un estado a otro se realiza bajo las siguientes condiciones:
+            </p>
+            <ul>
+                <li><strong>De Disponible a Reservado:</strong> Un usuario puede reservar un libro disponible, cambiando su estado a reservado.</li>
+                <li><strong>De Reservado a Prestado:</strong> Una vez que el usuario recoge el libro reservado, el estado cambia a prestado.</li>
+                <li><strong>De Prestado a En Devolución:</strong> Cuando el plazo de préstamo ha expirado, el libro entra en el estado de devolución.</li>
+                <li><strong>De En Devolución a Disponible:</strong> Tras la devolución, el libro vuelve al estado disponible, listo para ser prestado nuevamente.</li>
+                <li><strong>De Disponible a Reparación:</strong> Si el libro está dañado, se cambia a reparación hasta que sea arreglado.</li>
+                <li><strong>De Reparación a Disponible:</strong> Una vez reparado, el libro vuelve a estar disponible.</li>
+                <li><strong>De Disponible a Fuera de Circulación:</strong> Si el libro se pierde o se descarta, se retira del inventario y se marca como fuera de circulación.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sistema de Gestión de Biblioteca. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Sistema de Gestión Bibliotecario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" as="style">
+
+
 </head>
 <body>
     
@@ -26,63 +30,89 @@
 
     <header class="content header">
         <h2 class="title">Sistema de Gestión Bibliotecario</h2>
-        <p>Un sistema diseñado para facilitar la gestión y organización de bibliotecas.</p>
+        <p>El Sistema de Gestión de Biblioteca es una herramienta integral que automatiza procesos clave como préstamos, reservas, gestión de multas, mantenimiento de inventarios y generación de reportes. Diseñado para optimizar las operaciones bibliotecarias, garantiza eficiencia, precisión y soporte en la toma de decisiones administrativas.</p>
 
         <div class="btn-home">
-            <a href="#uso" class="btn">Saber más</a>
+            <a href="info.html" class="btn">Saber más</a>
         </div>
+        
     </header>
 
     <section id="uso" class="content sau">
         <h2 class="title">Diagrama Casos de Uso</h2>
-        <p>Conoce cómo interactúan los usuarios con el sistema.</p>
-
-        <div class="box-container">
-            <div class="box"> 
-                <i class="fab fa-angular"></i>
-                <h3>Módulo Angular</h3>
-                <p>Construido con la tecnología Angular para mayor rendimiento.</p>
-            </div>
-            <div class="box"> 
-                <i class="fab fa-apple"></i>
-                <h3>Integración iOS</h3>
-                <p>Compatible con sistemas iOS para mayor alcance.</p>
-            </div>
-            <div class="box"> 
-                <i class="fab fa-android"></i>
-                <h3>Soporte Android</h3>
-                <p>Optimizado para dispositivos Android.</p>
-            </div>
-        </div>
+        <h3 class="subtitle">Gestión de libros</h3>
+        <p> Este módulo permite administrar los libros de la biblioteca, facilitando la búsqueda mediante filtros como título, autor, ISBN, y género. Los bibliotecarios pueden registrar nuevos libros, actualizar su información, cambiar su estado (como "no disponible" o "en reparación") y eliminar libros obsoletos. También permite consultar estadísticas sobre la disponibilidad y popularidad de los libros.</p>
+        <a href="uso.html" class="btn">Ver detalles</a>
     </section>
-
+    
     <section id="estado" class="content about">
         <h2 class="title">Diagrama de Estado</h2>
-        <p>Explora las transiciones de estado dentro del sistema.</p>
-        <a href="#" class="btn">Ver más</a>
+        <h3 class="subtitle">Gestión de Mantenimiento Y reportes</h3>
+        <p>
+            Este módulo proporciona herramientas para mantener actualizada la base de datos y generar reportes sobre el estado del inventario, patrones de préstamo, multas, y libros más y menos solicitados. Permite a los bibliotecarios realizar tareas de mantenimiento como eliminar registros duplicados, corregir errores y auditar la integridad del sistema. Los libros pueden tener los siguientes estados: Disponible, cuando el libro está accesible para préstamo o venta; Reservado, cuando ha sido apartado y no puede ser prestado a otros; Prestado, cuando está en posesión de un usuario y no disponible para otros; En Devolución, cuando el libro debe ser regresado tras el vencimiento del préstamo; Reparación, cuando está en mantenimiento y no disponible para préstamo; y Fuera de Circulación, cuando ha sido retirado del inventario por pérdida o decisión administrativa.</p>
+        <a href="estado.html" class="btn">Ver detalles</a>
     </section>
     
     <section id="clases" class="content price">
-        <article class="contain">
-            <h2 class="title">Diagrama de Clases</h2>
-            <p>Detalles estructurales del sistema.</p>
-            <a href="#" class="btn">Más información</a>
-        </article>
+        <h2 class="title">Diagrama de Clases</h2>
+        <h3 class="subtitle">Gestión de Inventario</h3>
+        <p>Este módulo gestiona la disponibilidad y el estado de los libros en tiempo real, permitiendo a los bibliotecarios actualizar la ubicación de los libros, registrar nuevos ejemplares, y cambiar su estado según su condición. También facilita auditorías periódicas e informes sobre discrepancias o libros perdidos. Las clases principales incluyen: Empleado, encargado de gestionar el inventario y registrar préstamos; Libro, que representa cada ejemplar con atributos como título, autor, ISBN y estado; Inventario, que maneja la lista de libros disponibles y permite buscar y verificar su estado; Usuario, que representa a los usuarios de la biblioteca y permite solicitudes de préstamo y devolución; Préstamo, que registra las transacciones de préstamo de libros; y Sanción, que aplica penalizaciones a los usuarios por incumplir normas, como retrasos o pérdidas de libros.</p>
+        <a href="clases.html" class="btn">Ver detalles</a>
     </section>
 
+    
     <section id="flujo" class="content contact">
-        <h2 class="title">Diagrama de Flujo</h2>
-        <p>Un flujo claro para los procesos del sistema.</p>
-        <figure class="casos-de-uso">
-            <img src="img/CasosDeUso.png" height="240px" width="100%" alt="Casos de Uso">
-        </figure>
+        <h2 class="title">Diagrama De Flujo</h2>
+        <h3 class="subtitle">Gestión de Multas y Sanciones</h3>
+        <p>
+            Este módulo calcula automáticamente las multas para los usuarios que no devuelven los libros a tiempo, considerando días de retraso y políticas de tarifas. 
+            Genera reportes detallados sobre multas acumuladas, permite la gestión de sanciones y el registro de pagos. 
+            Además, los usuarios pueden apelar las multas, y los bibliotecarios pueden ajustar o confirmar sanciones, asegurando un proceso justo y eficiente.
+        </p>
+        <a href="flujo.html" class="btn">Ver detalles</a>
     </section>
-
-    <section id="secuencia" class="content contact">
+    
+    
+    <section id="secuencia" class="content about">
         <h2 class="title">Diagrama de Secuencia</h2>
-        <p>Entiende las interacciones entre los componentes.</p>
-        <a href="#" class="btn">Detalles</a>
+        <h3 class="subtitle">Gestión de Usuarios - Préstamos y Reservas de Libros</h3> <!-- Subtítulo añadido -->
+        <p>Este módulo permite a los usuarios registrados gestionar préstamos y reservas de libros. Los usuarios pueden consultar su historial de préstamos, realizar reservas de libros no disponibles, y recibir notificaciones sobre fechas de devolución próximas o vencidas. El sistema verifica la disponibilidad de los libros y actualiza automáticamente el historial, incluyendo libros en préstamo, reservados y devueltos. Los bibliotecarios pueden administrar estos procesos y consultar el estado de los libros.</p>
+        <a href="secuencia.html" class="btn">Ver detalles</a>
     </section>
-
+    
 </body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-images">
+            <img src='img/madurito.png' alt="Tirando Facha" class="footer-image">
+        </div>
+        <div class="footer-text">
+            <h2>Sistema de Gestión Bibliotecario</h2>
+            <nav class="footer-links">
+                <a href="#">Inicio</a>
+            </nav>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span class="brand">JADES.DEV</span>. Todos los derechos reservados.</p>
+                <p>Desarrollado por:</p>
+                <ul class="developers-list">
+                    <li>Erika Ramírez</li>
+                    <li>Arturo Zora</li>
+                    <li>Estiven Muñoz</li>
+                    <li>Andrés Jaramillo</li>
+                    <li>Diego Carrasquilla</li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div class="footer-images">
+            <img src='img/petrico3.jpg' alt="Amando La vida" class="footer-image">
+        </div>
+    </div>
+</footer>
 </html>

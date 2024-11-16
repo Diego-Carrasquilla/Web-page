@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama De Secuencia y Clases</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-int.css">
+    <style>
+        .image-content {
+            margin-top: 40px; /* Aumenta el margen superior para desplazar más la imagen */
+            display: flex;
+            justify-content: center; /* Centra la imagen horizontalmente */
+        }
+        .image-content img {
+            max-width: 80%; /* Ajusta el tamaño de la imagen, si es necesario */
+            height: auto;
+            border: 1px solid #ccc; /* Opcional: añade un borde para mejor visibilidad */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Opcional: añade sombra para estética */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="overlay">
+            <h1 class="title">Diagrama De Clases</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Sección de Gestión de Usuarios -->
+        <section class="info-section">
+            <div class="text-content">
+                <h1 class="title">Gestión de Inventario</h1>
+                <h2>Descripción</h2>
+                <p>
+                    Este módulo facilita a los usuarios registrados realizar préstamos de libros, consultar su historial de préstamos y realizar reservas de libros que no están disponibles actualmente. El sistema asegura la gestión de fechas límite para devoluciones, indicando claramente los plazos establecidos.
+                </p>
+                <p>
+                    También se registra automáticamente el historial de préstamos de cada usuario, incluyendo libros devueltos, en préstamo o reservados. Los bibliotecarios pueden consultar y administrar el estado de los préstamos y reservas. Además, se generan notificaciones automáticas para recordar a los usuarios sobre fechas de devolución próximas o vencidas.
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="img/Clases.jpg" alt="Módulo de Préstamos y Reservas">
+            </div>
+        </section>
+
+        <!-- Sección de Diagrama de Clases -->
+        <section class="inventory-section">
+            <h2>Gestión de Inventario</h2>
+            <h3>Diagrama de Clases</h3>
+            <p>
+                Este módulo gestiona la disponibilidad y el estado de los libros en tiempo real. Los bibliotecarios pueden actualizar información relacionada con la ubicación física de los libros dentro de la biblioteca, registrar nuevos ejemplares en el inventario y cambiar el estado de los libros según su condición: disponibles, en préstamo, reservados, en reparación o perdidos. El sistema también permite realizar auditorías periódicas del inventario, generando reportes detallados sobre discrepancias o libros extraviados.
+            </p>
+            <h4>Clases Principales</h4>
+            <ul>
+                <li>
+                    <strong>Clase: Empleado</strong>
+                    <p>Descripción: Los empleados son responsables de gestionar el inventario de la biblioteca.</p>
+                    <p>Funciones principales:</p>
+                    <ul>
+                        <li>Agregar nuevos libros al sistema.</li>
+                        <li>Registrar los préstamos y devoluciones.</li>
+                        <li>Verificar que los libros estén en buen estado.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Clase: Libro</strong>
+                    <p>Descripción: Representa cada libro en la biblioteca, con atributos clave.</p>
+                    <p>Atributos principales:</p>
+                    <ul>
+                        <li>Título.</li>
+                        <li>Autor.</li>
+                        <li>ISBN.</li>
+                        <li>Ubicación en la biblioteca.</li>
+                        <li>Estado actual (disponible, prestado, perdido).</li>
+                    </ul>
+                    <p>Relación: Puede ser prestado a usuarios y devuelto al inventario.</p>
+                </li>
+                <li>
+                    <strong>Clase: Inventario</strong>
+                    <p>Descripción: Representa la lista completa de libros disponibles en la biblioteca.</p>
+                    <p>Funciones principales:</p>
+                    <ul>
+                        <li>Actualizar el estado de los libros (disponible, prestado, perdido).</li>
+                        <li>Buscar libros por ISBN u otros atributos.</li>
+                        <li>Verificar la disponibilidad de libros.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Clase: Usuario</strong>
+                    <p>Descripción: Representa a las personas que utilizan los servicios de la biblioteca.</p>
+                    <p>Atributos principales:</p>
+                    <ul>
+                        <li>Nombre del usuario.</li>
+                        <li>ID único.</li>
+                        <li>Tipo de usuario (estudiante, docente, visitante, etc.).</li>
+                    </ul>
+                    <p>Relación: Pueden realizar solicitudes de préstamo y devolver libros, cumpliendo con las normas de la biblioteca.</p>
+                </li>
+                <li>
+                    <strong>Clase: Préstamo</strong>
+                    <p>Descripción: Registra las transacciones de préstamos de libros entre usuarios y la biblioteca.</p>
+                    <p>Atributos principales:</p>
+                    <ul>
+                        <li>Fecha de préstamo.</li>
+                        <li>Fecha de devolución esperada.</li>
+                    </ul>
+                    <p>Relación: Permite controlar los libros prestados y asegurar su retorno dentro del tiempo establecido.</p>
+                </li>
+                <li>
+                    <strong>Clase: Sanción</strong>
+                    <p>Descripción: Representa las penalizaciones aplicadas a los usuarios por incumplir las normas.</p>
+                    <p>Atributos principales:</p>
+                    <ul>
+                        <li>Monto de la multa.</li>
+                        <li>Razón de la sanción (retraso, pérdida de un libro, etc.).</li>
+                    </ul>
+                    <p>Relación: Se vincula al usuario que incumplió las normas y se registra en el sistema para llevar un seguimiento del comportamiento del usuario.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sistema de Gestión de Biblioteca. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

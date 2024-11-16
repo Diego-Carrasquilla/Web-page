@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama De Flujo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-int.css">
+</head>
+<body>
+    <header class="header">
+        <div class="overlay">
+            <h1 class="title">Diagrama De Flujo</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="info-section">
+            <div class="text-content">
+                <h1 class="title">Gestión de Multas y Sanciones</h1>
+                <h2>Descripción</h2>
+                <p>
+                    Este módulo facilita a los usuarios registrados realizar préstamos de libros, consultar su historial de préstamos y realizar reservas de libros que no están disponibles actualmente. El sistema asegura la gestión de fechas límite para devoluciones, indicando claramente los plazos establecidos.
+                </p>
+                <p>
+                    También se registra automáticamente el historial de préstamos de cada usuario, incluyendo libros devueltos, en préstamo o reservados. Los bibliotecarios pueden consultar y administrar el estado de los préstamos y reservas. Además, se generan notificaciones automáticas para recordar a los usuarios sobre fechas de devolución próximas o vencidas.
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="img/madurito.png" alt="Módulo de Préstamos y Reservas">
+            </div>
+        </section>
+
+        <!-- Sección para el Diagrama de Flujo de Gestión de Multas y Sanciones -->
+        <section id="flujo" class="info-section">
+            <div class="text-content">
+                <h2>Diagrama de Flujo: Gestión de Multas y Sanciones</h2>
+                <h3 class="subtitle">Automatización y Gestión de Retrasos en Devoluciones de Libros</h3>
+                <p>
+                    Este módulo automatiza el cálculo de multas para los usuarios que no devuelven los libros dentro del período permitido. El cálculo considera factores como el número de días de retraso y las políticas de la biblioteca, como tarifas específicas por día. Además, el sistema genera reportes detallados sobre usuarios con multas acumuladas y permite a los bibliotecarios gestionar dichas sanciones, marcando las multas como pagadas o ajustándolas en casos justificados.
+                </p>
+                <p><strong>Flujo de Proceso:</strong></p>
+                <ul>
+                    <li><strong>Inicio del Proceso:</strong> El flujo comienza en un punto claro y definido.</li>
+                    <li><strong>Verificación de Devolución a Tiempo:</strong> Se verifica si el libro fue devuelto dentro del plazo establecido.</li>
+                    <li><strong>Condiciones:</strong> 
+                        <ul>
+                            <li>A tiempo: El proceso termina aquí.</li>
+                            <li>Retrasado: Continúa con el cálculo de la multa.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Registro de Fecha de Devolución:</strong> Se registra la fecha exacta de devolución para calcular los días de retraso.</li>
+                    <li><strong>Cálculo de Días de Retraso:</strong> Se determina cuántos días han pasado desde la fecha límite de devolución.</li>
+                    <li><strong>Aplicación de Tarifa por Retraso:</strong> Se calcula la multa multiplicando los días de retraso por una tarifa diaria.</li>
+                    <li><strong>Generación del Monto Total de la Multa:</strong> Se calcula el monto total que el usuario debe pagar según los días de retraso.</li>
+                    <li><strong>Registro de la Multa en el Sistema:</strong> Se almacena la multa en el sistema para mantener un registro oficial.</li>
+                    <li><strong>Revisión de Historial del Usuario:</strong> Se verifica si el usuario tiene retrasos previos en su historial.</li>
+                    <li><strong>Escalamiento de Sanciones Adicionales:</strong> Si hay retrasos previos, se evalúan sanciones más severas.</li>
+                    <li><strong>Notificación al Usuario:</strong> Se informa al usuario sobre el monto de la multa y cualquier sanción adicional.</li>
+                    <li><strong>Registro del Pago de la Multa:</strong> Si el usuario paga, el sistema registra el pago correspondiente.</li>
+                    <li><strong>Proceso de Apelación:</strong> Se verifica si el usuario desea apelar la multa.</li>
+                    <li><strong>Revisión de la Apelación:</strong> Un bibliotecario evalúa la apelación.</li>
+                    <li><strong>Resolución de la Apelación:</strong> La multa puede ser confirmada o ajustada.</li>
+                    <li><strong>Gestión de Sanciones:</strong> El bibliotecario aplica y gestiona sanciones adicionales de manera justa.</li>
+                    <li><strong>Fin del Proceso:</strong> El flujo concluye una vez que se resuelven todas las multas y sanciones.</li>
+                </ul>
+            </div>
+            <div class="image-content">
+                <img src="img/Flujo.jpg" alt="Diagrama de Flujo de Multas y Sanciones">
+            </div>
+        </section>
+
+        <section class="actors-section">
+            <h2>Actores</h2>
+            <ul>
+                <li><strong>Usuario:</strong> Persona que no devuelve los libros dentro del plazo establecido.</li>
+                <li><strong>Bibliotecario:</strong> Persona encargada de gestionar las multas y sanciones.</li>
+                <li><strong>Sistema de Gestión de Biblioteca (SGB):</strong> Sistema encargado de calcular las multas y sanciones.</li>
+                <li><strong>Base de Datos de Multas (BDM):</strong> Repositorio donde se almacenan las multas y sanciones de los usuarios.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sistema de Gestión de Biblioteca. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
